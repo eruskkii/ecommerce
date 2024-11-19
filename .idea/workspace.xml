@@ -10,62 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1670c691-d2b0-4f6e-948a-83f9a76ca411" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/config/ConnectionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/AdminServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/CartServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/CatalogueServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/CategoryServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/ProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/WishlistServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/dao/CartDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/dao/CategoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/dao/ProductDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/dao/WishlistDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/model/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/model/UserSignup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/model/Wishlist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/services/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/services/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/services/Validation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ecommerce/services/WishlistService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demojdbc2/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/demojdbc2/JDBC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/addCategory.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/addProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin-dashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/adminsignup.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/cart.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/catalogue.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/deleteProduct.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login-success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/product-success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/productPage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/signup-error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/signup-success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/update-product.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/user-dashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/wishlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +187,7 @@
       <workItem from="1731876176345" duration="466000" />
       <workItem from="1731882083073" duration="36620000" />
       <workItem from="1731987892032" duration="193000" />
-      <workItem from="1731988101395" duration="13917000" />
+      <workItem from="1731988101395" duration="15280000" />
     </task>
     <servers />
   </component>
