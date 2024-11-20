@@ -1,12 +1,12 @@
 package ecommerce.dao;
 
+import ecommerce.model.Product;
 import ecommerce.model.UserSignup;
 import ecommerce.config.ConnectionUtils;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
     private Connection connection;
@@ -81,6 +81,34 @@ public class UserDao {
             throw new RuntimeException(e);
         }
         return user; // Will return null if the user doesn't exist or credentials are wrong
+    }
+
+    public List<UserSignup> getAllUsers() {
+        List<UserSignup> users = new ArrayList<>();
+        String query = "SELECT user_id, firstname, lastname, username, email, created_at, role FROM users";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("user_id");
+                String firstName = resultSet.getString("firstname");
+                String lastName = resultSet.getString("lastname");
+                String userName = resultSet.getString("username");
+                String email = resultSet.getString("email");
+                Timestamp createdAt = resultSet.getTimestamp("created_at");
+                String role = resultSet.getString("role");
+
+                UserSignup user = new UserSignup(id, firstName, lastName, userName, email, createdAt, role);
+                users.add(user);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error fetching all users", e);
+        }
+
+        return users;
     }
 
 }

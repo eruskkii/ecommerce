@@ -1,13 +1,16 @@
 package ecommerce.model;
 
+import java.sql.Timestamp;
+
 public class UserSignup {
-    private int userid;
+    private int userId;
     private String firstName;
     private String lastName;
     private String userName;
     private String email;
     private String password;
     private String role;
+    private Timestamp createdAt;
 
 
     public UserSignup(String firstName, String lastName, String username, String email, String password, String role) {
@@ -21,23 +24,39 @@ public class UserSignup {
 
     public UserSignup() {
     }
+// Fetch users without password
+    public UserSignup(int id, String firstName, String lastName, String userName, String email,
+                      Timestamp createdAt, String role) {
+        this.userId = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.email = email;
+        this.createdAt = createdAt;
+        this.role = role;
+
+
+    }
+
+
 
     public UserSignup(int id, String firstName, String lastName, String userName, String email, String password, String role) {
-        this.userid = id;
+        this.userId = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
         this.password = password;
         this.role = role;
+
     }
 
     public int getId() {
-        return userid;
+        return userId;
     }
 
     public void setId(int id) {
-        this.userid = id;
+        this.userId = id;
     }
 
     public String getFirstName() {
@@ -87,10 +106,18 @@ public class UserSignup {
         this.role = role;
     }
 
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
     @Override
     public String toString() {
         return "UserSignup{" +
-                "id=" + userid +
+                "id=" + userId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +

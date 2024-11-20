@@ -7,42 +7,33 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Update Product</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming a stylesheet is available -->
 </head>
 <body>
 <h1>Update Product</h1>
 
-<form action="admin-product-servlet" method="post">
-    <input type="hidden" name="action" value="updateProduct">
-    <label for="productId">Select Product:</label>
-    <select name="productId" id="productId" required>
-        <c:forEach var="product" items="${products}">
-            <option value="${product.productId}">
-                    ${product.name} - ${product.price} USD
-            </option>
-        </c:forEach>
-    </select><br><br>
+<form action="updateProductServlet" method="post">
+    <input type="hidden" name="product_id" value="${product.product_id}">
 
     <label for="name">Product Name:</label>
-    <input type="text" name="name" id="name" value="${selectedProduct.name}" required><br><br>
+    <input type="text" id="name" name="name" value="${product.name}" required>
 
     <label for="price">Price:</label>
-    <input type="number" name="price" id="price" value="${selectedProduct.price}" step="0.01" required><br><br>
+    <input type="number" step="0.01" id="price" name="price" value="${product.price}" required>
 
     <label for="quantity">Quantity:</label>
-    <input type="number" name="quantity" id="quantity" value="${selectedProduct.quantity}" required><br><br>
+    <input type="number" id="quantity" name="quantity" value="${product.quantity}" required>
 
     <button type="submit">Update Product</button>
 </form>
 
-<div class="back">
-    <a href="admin-dashboard.jsp">Back to Admin Dashboard</a>
-</div>
+<a href="view-all-products">Back to Product List</a>
 </body>
 </html>
 

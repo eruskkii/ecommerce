@@ -1,5 +1,7 @@
 package ecommerce.model;
 
+import java.sql.Timestamp;
+
 public class Product {
     private int product_id;
     private String name;
@@ -7,6 +9,7 @@ public class Product {
     private double price;
     private int quantity;
     private int category_id;
+    private Timestamp createdAt;
 
 //    Constructor to add new product. Doesn't need Product_id as it's set to auto increment on the DB
     public Product(String name, String description, double price, int quantity) {

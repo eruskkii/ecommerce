@@ -6,6 +6,8 @@ import ecommerce.dao.UserDao;
 import ecommerce.model.UserSignup;
 import ecommerce.config.ConnectionUtils;
 
+import java.util.List;
+
 public class UserService {
     private UserDao userDao;
 
@@ -24,6 +26,10 @@ public class UserService {
 
     public UserSignup authenticateUser(String email, String password) {
         return userDao.loginUser(email, password);
+    }
+
+    public List<UserSignup> getAllUsers() {
+        return userDao.getAllUsers();
     }
 }
 

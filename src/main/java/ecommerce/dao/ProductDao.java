@@ -59,6 +59,33 @@ public class ProductDao {
         return price;
     }
 
+    public Product getProductById(int productId) {
+        Product product = null;
+        String query = "SELECT * FROM products WHERE product_id = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, productId);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    product = new Product();
+                    product.setProduct_id(resultSet.getInt("product_id"));
+                    product.setName(resultSet.getString("name"));
+                    product.setDescription(resultSet.getString("description"));
+                    product.setPrice(resultSet.getDouble("price"));
+                    product.setQuantity(resultSet.getInt("quantity"));
+                    product.setCategory_id(resultSet.getInt("category_id"));
+//                    product.setCreated_at(resultSet.getTimestamp("created_at"));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error retrieving product by ID", e);
+        }
+
+        return product;
+    }
+
     public boolean updateProduct(Product product) {
         String updateSQL = "UPDATE products SET name = ?, price = ?, quantity = ? WHERE product_id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(updateSQL)) {

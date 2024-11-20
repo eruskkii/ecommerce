@@ -20,11 +20,11 @@
     <ul>
         <li><a href="addCategory.jsp">Add New Category</a></li>
         <li><a href="addProduct">Add New Product</a></li>
-        <li><a href="update-product.jsp">Update Product</a></li> <!-- Update Product Option -->
-        <li><a href="deleteProduct.jsp">Delete Product</a></li> <!-- Delete Product Option -->
-        <li><a href="catalogue-servlet">View All Products</a></li> <!-- View Products Option -->
-        <li><a href="viewUsers.jsp">View Users</a></li> <!-- Placeholder for user management -->
-        <li><a href="viewOrders.jsp">View Orders</a></li> <!-- Placeholder for order management -->
+<%--        <li><a href="update-product.jsp">Update Product</a></li> <!-- Update Product Option -->--%>
+<%--        <li><a href="deleteProduct.jsp">Delete Product</a></li> <!-- Delete Product Option -->--%>
+        <li><a href="view-all-products">View All Products</a></li> <!-- View Products Option -->
+        <li><a href="view-all-users">View Users</a></li> <!-- Placeholder for user management -->
+        <li><a href="viewOrders.jsp">View Orders (Coming soon)</a></li> <!-- Placeholder for order management -->
     </ul>
 </div>
 

@@ -29,7 +29,7 @@ public class addProductServlet extends HttpServlet {
             request.setAttribute("successMessage", "Product added successfully!");
         }
 
-        request.getRequestDispatcher("/WEB-INF/addProduct.jsp").forward(request, response);
+        request.getRequestDispatcher("addProduct.jsp").forward(request, response);
     }
 
     @Override
