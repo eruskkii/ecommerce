@@ -100,7 +100,7 @@ public class ProductDao {
                 double price = resultSet.getDouble("price");
                 int quantity = resultSet.getInt("quantity");
 
-                Product product = new Product(name, description, price, quantity);
+                Product product = new Product(product_id, name, description, price, quantity);
                 products.add(product);
             }
 

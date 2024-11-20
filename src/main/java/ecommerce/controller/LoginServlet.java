@@ -28,6 +28,9 @@ public class LoginServlet extends HttpServlet {
             if (user != null) {
                 // Store user information in session
                 request.getSession().setAttribute("loggedInUser", user);
+                request.getSession().setAttribute("userName", user.getUserName());
+                request.getSession().setAttribute("userId", user.getId()); // Store userId separately for easy access
+                request.getSession().setAttribute("role", user.getRole()); // Store role separately for role management
 
                 // Redirect based on role
                 if ("admin".equals(user.getRole())) {

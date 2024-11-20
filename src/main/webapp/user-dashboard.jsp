@@ -15,7 +15,8 @@
 </head>
 <body>
 <h1>Welcome, ${sessionScope.userName}!</h1> <!-- Assuming userName is stored in session -->
-
+<h2>Your UserID is, ${sessionScope.userId}!</h2>
+<h2>Your role is, ${sessionScope.role}!</h2>
 <div class="dashboard-options">
     <ul>
         <li><a href="catalogue-servlet">Browse Catalogue</a></li>

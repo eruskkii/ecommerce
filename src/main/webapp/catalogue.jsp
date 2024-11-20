@@ -22,6 +22,8 @@
             <h2>${product.name}</h2>
             <p><strong>Price:</strong> $${product.price}</p>
             <p><strong>Description:</strong> ${product.description}</p>
+            <p><strong>ProductId:</strong> ${product.product_id}</p>
+
 
             <!-- Add to Cart Button -->
             <form action="cart-servlet" method="post">
@@ -41,7 +43,7 @@
     </c:forEach>
 
 </div>
-<a href="user-dashboard.jsp" class="back">Back to Dashboard</a>
+<a href="user-dashboard-servlet" class="back">Back to Dashboard</a>
 </body>
 </html>
 

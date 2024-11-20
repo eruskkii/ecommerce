@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "addProductToServlet", value = "/addProduct")
-public class ProductServlet extends HttpServlet {
+public class addProductServlet extends HttpServlet {
     private ProductService productService = new ProductService();
 
     @Override

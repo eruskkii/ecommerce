@@ -10,7 +10,7 @@ public class Cart {
     private int productId;
     private int quantity;
     private Product product;
-    private Timestamp addedAt;
+    private Timestamp createdAt;
 
     // Constructors
     public Cart() {
@@ -55,12 +55,12 @@ public class Cart {
         this.quantity = quantity;
     }
 
-    public Timestamp getAddedAt() {
-        return addedAt;
+    public Timestamp getCreatedAt() {
+        return createdAt;
     }
 
-    public void setAddedAt(Timestamp addedAt) {
-        this.addedAt = addedAt;
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
     }
 
     public void setProduct(Product product) {

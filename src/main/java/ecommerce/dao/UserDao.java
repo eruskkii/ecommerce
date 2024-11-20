@@ -59,7 +59,8 @@ public class UserDao {
     public UserSignup loginUser(String email, String password) {
         UserSignup user = null;
         try {
-            String sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+            String sql = "SELECT user_id, firstname, lastname, username, email, password, role FROM users WHERE email = ? AND password = ?";
+
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
@@ -67,6 +68,7 @@ public class UserDao {
 
             if (resultSet.next()) {
                 user = new UserSignup(
+                        resultSet.getInt("user_id"),
                         resultSet.getString("firstName"),
                         resultSet.getString("lastName"),
                         resultSet.getString("username"),

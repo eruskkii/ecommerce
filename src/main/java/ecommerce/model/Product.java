@@ -8,8 +8,21 @@ public class Product {
     private int quantity;
     private int category_id;
 
+//    Constructor to add new product. Doesn't need Product_id as it's set to auto increment on the DB
     public Product(String name, String description, double price, int quantity) {
 
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+
+    }
+
+//    Constructor to fetch all products. This time we need to fetch the db
+
+    public Product(int product_id, String name, String description, double price, int quantity) {
+
+        this.product_id = product_id;
         this.name = name;
         this.description = description;
         this.price = price;

@@ -22,13 +22,15 @@ public class UserSignup {
     public UserSignup() {
     }
 
-//    public UserSignup(int id, String firstName, String lastName, String email, String password) {
-//        this.userid = id;
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.email = email;
-//        this.password = password;
-//    }
+    public UserSignup(int id, String firstName, String lastName, String userName, String email, String password, String role) {
+        this.userid = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
 
     public int getId() {
         return userid;

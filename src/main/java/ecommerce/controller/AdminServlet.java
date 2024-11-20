@@ -34,60 +34,60 @@ public class AdminServlet extends HttpServlet {
 
     }
 
-//    @Override
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        // Since admins might have several actions (like adding products, managing categories), the `action` parameter can be used to decide
-//        String action = request.getParameter("action");
-//
-//        // Depending on the action, delegate to specific methods or servlets
-//        if ("addCategory".equals(action)) {
-//            // Redirect to category addition form
-//            response.sendRedirect("addCategory.jsp");
-//        } else if ("addProduct".equals(action)) {
-//            // Redirect to product addition form
-//            response.sendRedirect("addProduct.jsp");
-//        } else if ("updateProduct".equals(action)) {
-//            // Handle update product form submission
-//            int productId = Integer.parseInt(request.getParameter("productId"));
-//            String name = request.getParameter("name");
-//            double price = Double.parseDouble(request.getParameter("price"));
-//            int quantity = Integer.parseInt(request.getParameter("quantity"));
-//
-//            Product updatedProduct = new Product();
-//            updatedProduct.setProduct_id(productId);
-//            updatedProduct.setName(name);
-//            updatedProduct.setPrice(price);
-//            updatedProduct.setQuantity(quantity);
-//
-//            // Assume productService is already instantiated
-//            boolean success = productService.updateProduct(updatedProduct);
-//
-//            if (success) {
-//                response.sendRedirect("admin-dashboard.jsp?success=updateSuccess");
-//            } else {
-//                response.sendRedirect("admin-dashboard.jsp?error=updateFailed");
-//            }
-//        } else if ("deleteProduct".equals(action)) {
-//            // Handle delete product action
-//            int productId = Integer.parseInt(request.getParameter("productId"));
-//            boolean confirmation = "yes".equals(request.getParameter("confirmation"));
-//
-//            if (confirmation) {
-//                boolean success = productService.deleteProduct(productId);
-//
-//                if (success) {
-//                    response.sendRedirect("admin-dashboard.jsp?success=deleteSuccess");
-//                } else {
-//                    response.sendRedirect("admin-dashboard.jsp?error=deleteFailed");
-//                }
-//            } else {
-//                response.sendRedirect("admin-dashboard.jsp?error=deleteNotConfirmed");
-//            }
-//        } else {
-//            // Default action: Display the admin dashboard
-//            response.sendRedirect("admin-dashboard.jsp");
-//        }
-//    }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Since admins might have several actions (like adding products, managing categories), the `action` parameter can be used to decide
+        String action = request.getParameter("action");
+
+        // Depending on the action, delegate to specific methods or servlets
+        if ("addCategory".equals(action)) {
+            // Redirect to category addition form
+            response.sendRedirect("addCategory.jsp");
+        } else if ("addProduct".equals(action)) {
+            // Redirect to product addition form
+            response.sendRedirect("addProduct.jsp");
+        } else if ("updateProduct".equals(action)) {
+            // Handle update product form submission
+            int productId = Integer.parseInt(request.getParameter("product_id"));
+            String name = request.getParameter("name");
+            double price = Double.parseDouble(request.getParameter("price"));
+            int quantity = Integer.parseInt(request.getParameter("quantity"));
+
+            Product updatedProduct = new Product();
+            updatedProduct.setProduct_id(productId);
+            updatedProduct.setName(name);
+            updatedProduct.setPrice(price);
+            updatedProduct.setQuantity(quantity);
+
+            // Assume productService is already instantiated
+            boolean success = productService.updateProduct(updatedProduct);
+
+            if (success) {
+                response.sendRedirect("admin-dashboard.jsp?success=updateSuccess");
+            } else {
+                response.sendRedirect("admin-dashboard.jsp?error=updateFailed");
+            }
+        } else if ("deleteProduct".equals(action)) {
+            // Handle delete product action
+            int productId = Integer.parseInt(request.getParameter("productId"));
+            boolean confirmation = "yes".equals(request.getParameter("confirmation"));
+
+            if (confirmation) {
+                boolean success = productService.deleteProduct(productId);
+
+                if (success) {
+                    response.sendRedirect("admin-dashboard.jsp?success=deleteSuccess");
+                } else {
+                    response.sendRedirect("admin-dashboard.jsp?error=deleteFailed");
+                }
+            } else {
+                response.sendRedirect("admin-dashboard.jsp?error=deleteNotConfirmed");
+            }
+        } else {
+            // Default action: Display the admin dashboard
+            response.sendRedirect("admin-dashboard.jsp");
+        }
+    }
 }
 
 

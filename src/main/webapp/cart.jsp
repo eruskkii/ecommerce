@@ -17,10 +17,13 @@
 <h1>Your Shopping Cart</h1>
 
 <!-- Display Success or Error Messages -->
+
+
+<!-- Display Success or Error Messages -->
 <c:if test="${not empty param.success}">
     <div class="success-message">
         <c:choose>
-            <c:when test="${param.success == 'true'}">Product added to cart successfully!</c:when>
+            <c:when test="${param.success == 'addedToCart'}">Product added to cart successfully!</c:when>
             <c:when test="${param.success == 'updated'}">Cart updated successfully!</c:when>
             <c:when test="${param.success == 'removed'}">Item removed from cart successfully!</c:when>
         </c:choose>
@@ -30,12 +33,13 @@
 <c:if test="${not empty param.error}">
     <div class="error-message">
         <c:choose>
-            <c:when test="${param.error == 'addFailed'}">Failed to add product to cart. Please try again.</c:when>
+            <c:when test="${param.error == 'addToCartFailed'}">Failed to add product to cart. Please try again.</c:when>
             <c:when test="${param.error == 'updateFailed'}">Failed to update cart item. Please try again.</c:when>
             <c:when test="${param.error == 'removeFailed'}">Failed to remove item from cart. Please try again.</c:when>
         </c:choose>
     </div>
 </c:if>
+
 
 <!-- Display Cart Items -->
 <c:if test="${not empty cartItems}">
@@ -94,7 +98,7 @@
 
 <!-- Link to continue shopping -->
 <div class="continue-shopping">
-    <a href="products.jsp">Continue Shopping</a>
+    <a href="catalogue-servlet">Continue Shopping</a>
 </div>
 </body>
 </html>
