@@ -3,10 +3,7 @@ package ecommerce.dao;
 import ecommerce.config.ConnectionUtils;
 import ecommerce.model.Product;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +14,12 @@ public class ProductDao {
         this.connection = ConnectionUtils.getConnection();
     }
 
-    // Add product to the database and return success status
+    private static final String URL = "jdbc:mysql://localhost:3306/ecommerce";
+    private static final String USER = "root";
+    private static final String PASSWORD = "Lion5$belt123";
+
+
+//     Add product to the database and return success status
     public boolean addProducts(Product product) {
         String sql = "INSERT INTO products (name, description, price, quantity, category_id) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -92,7 +94,7 @@ public class ProductDao {
              ResultSet resultSet = preparedStatement.executeQuery()) {
 
             while (resultSet.next()) {
-                int productId = resultSet.getInt("product_id");
+                int product_id = resultSet.getInt("product_id");
                 String name = resultSet.getString("name");
                 String description = resultSet.getString("description");
                 double price = resultSet.getDouble("price");
@@ -109,6 +111,33 @@ public class ProductDao {
 
         return products;
     }
+
+//    public static List<Product> getAllProducts() {
+//        List<Product> products = new ArrayList<>();
+//        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
+//            String sql = "SELECT * FROM products";
+//            PreparedStatement stmt = conn.prepareStatement(sql);
+//            ResultSet rs = stmt.executeQuery();
+//
+//            while (rs.next()) {
+//                Product product = new Product();
+//                product.setProduct_id(rs.getInt("product_id"));
+//                product.setName(rs.getString("name"));
+//                product.setDescription(rs.getString("description"));
+//                product.setPrice(rs.getDouble("price"));
+//                product.setQuantity(rs.getInt("quantity"));
+////                product.setImageUrl(rs.getBytes("imageUrl"));
+//                products.add(product);
+//                System.out.println("Product list shown successfully");
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return products;
+//    }
+
+
+
 
 
 }

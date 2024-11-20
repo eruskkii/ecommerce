@@ -18,7 +18,7 @@
 
 <div class="dashboard-options">
     <ul>
-        <li><a href="catalogue.jsp">Browse Catalogue</a></li>
+        <li><a href="catalogue-servlet">Browse Catalogue</a></li>
         <li><a href="cart-servlet">View Cart</a></li>
         <li><a href="wishlist-servlet">View Wishlist</a></li>
         <li><a href="profile.jsp">Update Profile</a></li> <!-- Placeholder for future profile page -->

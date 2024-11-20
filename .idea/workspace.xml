@@ -12,6 +12,15 @@
     <list default="true" id="1670c691-d2b0-4f6e-948a-83f9a76ca411" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ecommerce/controller/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/AdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ecommerce/controller/CatalogueServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/CatalogueServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ecommerce/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ecommerce/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ecommerce/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ecommerce/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ecommerce/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminsignup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminsignup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/catalogue.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/catalogue.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user-dashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,23 +62,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.33.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Emmanuel Paul/Decagon/demoJdbc2/src/main/webapp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.demoJdbc2 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demoJdbc2 [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.demoJdbc2 [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.33.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Emmanuel Paul/Decagon/demoJdbc2/src/main/webapp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Emmanuel Paul\Decagon\demoJdbc2\src\main\webapp" />
@@ -187,7 +199,8 @@
       <workItem from="1731876176345" duration="466000" />
       <workItem from="1731882083073" duration="36620000" />
       <workItem from="1731987892032" duration="193000" />
-      <workItem from="1731988101395" duration="15280000" />
+      <workItem from="1731988101395" duration="31513000" />
+      <workItem from="1732052857488" duration="11460000" />
     </task>
     <servers />
   </component>

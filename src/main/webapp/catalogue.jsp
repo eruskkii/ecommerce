@@ -18,7 +18,7 @@
 
     <!-- Loop through all products -->
     <c:forEach var="product" items="${products}">
-        <div class="product-item">
+        <div class="product">
             <h2>${product.name}</h2>
             <p><strong>Price:</strong> $${product.price}</p>
             <p><strong>Description:</strong> ${product.description}</p>
@@ -26,7 +26,7 @@
             <!-- Add to Cart Button -->
             <form action="cart-servlet" method="post">
                 <input type="hidden" name="action" value="addToCart">
-                <input type="hidden" name="productId" value="${product.productId}">
+                <input type="hidden" name="productId" value="${product.product_id}">
                 <input type="hidden" name="quantity" value="1"> <!-- Default quantity to 1 -->
                 <button type="submit">Add to Cart</button>
             </form>
@@ -34,7 +34,7 @@
             <!-- Add to Wishlist Button -->
             <form action="wishlist-servlet" method="post">
                 <input type="hidden" name="action" value="addToWishlist">
-                <input type="hidden" name="productId" value="${product.productId}">
+                <input type="hidden" name="productId" value="${product.product_id}">
                 <button type="submit">Add to Wishlist</button>
             </form>
         </div>

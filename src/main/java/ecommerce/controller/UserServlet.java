@@ -34,7 +34,11 @@ public class UserServlet extends HttpServlet {
         UserDao userDao = new UserDao(ConnectionUtils.getConnection());
         userDao.addUser(user);
 
+        request.getSession().setAttribute("role", role);
+        request.getSession().setAttribute("loggedInUser", user);
+
         // Redirect to a success page or display a message
         response.sendRedirect("signup-success.jsp");
     }
+
 }
